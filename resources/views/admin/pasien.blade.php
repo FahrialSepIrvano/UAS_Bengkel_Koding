@@ -12,6 +12,16 @@
       <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul class="mb-0">
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
+
     <div class="row">
       <!-- Form Tambah Pasien -->
       <div class="col-md-4">
@@ -81,10 +91,10 @@
                     <td>{{ $pasien->no_hp }}</td>
                     <td>{{ $pasien->alamat }}</td>
                     <td style="text-align:right;">
-                      <a href="{{ route('admin.pasien.edit', $pasien->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                      <a href="{{ route('admin.pasien.edit', $pasien->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
                       <form action="{{ route('admin.pasien.destroy', $pasien->id) }}" method="POST" style="display:inline;">
                         @csrf @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Hapus pasien ini?')"><i class="fas fa-trash"></i> Hapus</button>
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Hapus pasien ini?')"><i class="fas fa-trash-alt"></i> Hapus</button>
                       </form>
                     </td>
                   </tr>

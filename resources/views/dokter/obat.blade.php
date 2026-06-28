@@ -77,13 +77,13 @@
                     data-nama="{{ $obat->nama_obat }}"
                     data-kemasan="{{ $obat->kemasan }}"
                     data-harga="{{ $obat->harga }}">
-                    <i class="fas fa-edit"></i> Edit
+                    <i class="fas fa-pencil-alt"></i> Edit
                   </button>
                   <button
                     class="btn btn-danger btn-sm btn-delete"
                     data-id="{{ $obat->id }}"
                     data-nama="{{ $obat->nama_obat }}">
-                    <i class="fas fa-trash"></i>
+                    <i class="fas fa-trash-alt"></i> Hapus
                   </button>
                 </td>
               </tr>

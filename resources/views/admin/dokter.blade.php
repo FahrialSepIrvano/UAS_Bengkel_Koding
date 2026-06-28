@@ -108,10 +108,10 @@
                     <td>{{ $dokter->user->no_hp }}</td>
                     <td style="color:#3b5bdb;">{{ $dokter->user->email }}</td>
                     <td style="text-align:right;">
-                      <a href="{{ route('admin.dokter.edit', $dokter->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                      <a href="{{ route('admin.dokter.edit', $dokter->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
                       <form action="{{ route('admin.dokter.destroy', $dokter->id) }}" method="POST" style="display:inline;">
                         @csrf @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus dokter ini?')"><i class="fas fa-trash"></i> Hapus</button>
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus dokter ini?')"><i class="fas fa-trash-alt"></i> Hapus</button>
                       </form>
                     </td>
                   </tr>

@@ -82,10 +82,10 @@
                     <td class="font-weight-bold">{{ $poli->nama }}</td>
                     <td>{{ $poli->keterangan ?? '-' }}</td>
                     <td style="text-align:right;">
-                      <a href="{{ route('admin.poli.edit', $poli->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                      <a href="{{ route('admin.poli.edit', $poli->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
                       <form action="{{ route('admin.poli.destroy', $poli->id) }}" method="POST" style="display:inline;">
                         @csrf @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Hapus poli ini?')"><i class="fas fa-trash"></i> Hapus</button>
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Hapus poli ini?')"><i class="fas fa-trash-alt"></i> Hapus</button>
                       </form>
                     </td>
                   </tr>

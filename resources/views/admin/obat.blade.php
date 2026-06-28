@@ -132,19 +132,19 @@
                       <button class="btn btn-success btn-sm"
                         data-toggle="modal" data-target="#modalTambahStok"
                         data-id="{{ $obat->id }}" data-nama="{{ $obat->nama_obat }}" data-stok="{{ $obat->stok }}">
-                        <i class="fas fa-plus"></i> Stok
+                        <i class="fas fa-plus-circle"></i> Tambah
                       </button>
                       {{-- Tombol Kurangi Stok --}}
                       <button class="btn btn-warning btn-sm"
                         data-toggle="modal" data-target="#modalKurangiStok"
                         data-id="{{ $obat->id }}" data-nama="{{ $obat->nama_obat }}" data-stok="{{ $obat->stok }}">
-                        <i class="fas fa-minus"></i> Stok
+                        <i class="fas fa-minus-circle"></i> Kurangi
                       </button>
-                      <a href="{{ route('admin.obat.edit', $obat->id) }}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
+                      <a href="{{ route('admin.obat.edit', $obat->id) }}" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
                       <form action="{{ route('admin.obat.destroy', $obat->id) }}" method="POST" style="display:inline;">
                         @csrf @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">
-                          <i class="fas fa-trash"></i>
+                          <i class="fas fa-trash-alt"></i> Hapus
                         </button>
                       </form>
                     </td>
