@@ -41,11 +41,11 @@
               </div>
               <div class="form-group">
                 <label>Jam Mulai</label>
-                <input type="time" name="jam_mulai" class="form-control" required value="{{ $jadwal->jam_mulai }}">
+                <input type="time" name="jam_mulai" class="form-control" required value="{{ \Carbon\Carbon::parse($jadwal->jam_mulai)->format('H:i') }}">
               </div>
               <div class="form-group">
                 <label>Jam Selesai</label>
-                <input type="time" name="jam_selesai" class="form-control" required value="{{ $jadwal->jam_selesai }}">
+                <input type="time" name="jam_selesai" class="form-control" required value="{{ \Carbon\Carbon::parse($jadwal->jam_selesai)->format('H:i') }}">
               </div>
               <div class="form-group">
                 <label>Status Jadwal</label>

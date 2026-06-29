@@ -75,8 +75,8 @@
                 @forelse($jadwals as $jadwal)
                 <tr>
                   <td class="font-weight-bold">{{ $jadwal->hari }}</td>
-                  <td>{{ $jadwal->jam_mulai }}</td>
-                  <td>{{ $jadwal->jam_selesai }}</td>
+                  <td>{{ \Carbon\Carbon::parse($jadwal->jam_mulai)->format('H:i') }}</td>
+                  <td>{{ \Carbon\Carbon::parse($jadwal->jam_selesai)->format('H:i') }}</td>
                   <td>
                     @if($jadwal->is_aktif)
                       <span class="badge badge-success">Aktif</span>
