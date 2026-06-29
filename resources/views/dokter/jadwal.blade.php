@@ -85,11 +85,11 @@
                     @endif
                   </td>
                   <td style="text-align:right;">
-                    <a href="{{ route('jadwal.edit', $jadwal->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="{{ route('jadwal.edit', $jadwal->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
                     @if(!$jadwal->is_aktif)
                     <form action="{{ route('jadwal.aktifkan', $jadwal->id) }}" method="POST" style="display:inline-block;">
                       @csrf
-                      <button class="btn btn-success btn-sm" onclick="return confirm('Aktifkan jadwal ini?')">Aktifkan</button>
+                      <button class="btn btn-success btn-sm" onclick="return confirm('Aktifkan jadwal ini?')"><i class="fas fa-check-circle"></i> Aktifkan</button>
                     </form>
                     @endif
                   </td>

@@ -34,8 +34,8 @@
     /* =============================================
        GLOBAL FONT OVERRIDE
     ============================================= */
-    *, body {
-      font-family: 'Instrument Sans', sans-serif !important;
+    body, h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, select, textarea, td, th {
+      font-family: 'Instrument Sans', sans-serif;
     }
 
     /* =============================================

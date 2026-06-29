@@ -128,25 +128,27 @@
                       @endif
                     </td>
                     <td style="text-align:right;">
-                      {{-- Tombol Tambah Stok --}}
-                      <button class="btn btn-success btn-sm"
-                        data-toggle="modal" data-target="#modalTambahStok"
-                        data-id="{{ $obat->id }}" data-nama="{{ $obat->nama_obat }}" data-stok="{{ $obat->stok }}">
-                        <i class="fas fa-plus-circle"></i> Tambah
-                      </button>
-                      {{-- Tombol Kurangi Stok --}}
-                      <button class="btn btn-warning btn-sm"
-                        data-toggle="modal" data-target="#modalKurangiStok"
-                        data-id="{{ $obat->id }}" data-nama="{{ $obat->nama_obat }}" data-stok="{{ $obat->stok }}">
-                        <i class="fas fa-minus-circle"></i> Kurangi
-                      </button>
-                      <a href="{{ route('admin.obat.edit', $obat->id) }}" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
-                      <form action="{{ route('admin.obat.destroy', $obat->id) }}" method="POST" style="display:inline;">
-                        @csrf @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">
-                          <i class="fas fa-trash-alt"></i> Hapus
+                      <div class="d-flex justify-content-end align-items-center" style="gap: 6px;">
+                        {{-- Tombol Tambah Stok --}}
+                        <button class="btn btn-success btn-sm"
+                          data-toggle="modal" data-target="#modalTambahStok"
+                          data-id="{{ $obat->id }}" data-nama="{{ $obat->nama_obat }}" data-stok="{{ $obat->stok }}">
+                          <i class="fas fa-plus-circle"></i> Tambah
                         </button>
-                      </form>
+                        {{-- Tombol Kurangi Stok --}}
+                        <button class="btn btn-warning btn-sm"
+                          data-toggle="modal" data-target="#modalKurangiStok"
+                          data-id="{{ $obat->id }}" data-nama="{{ $obat->nama_obat }}" data-stok="{{ $obat->stok }}">
+                          <i class="fas fa-minus-circle"></i> Kurangi
+                        </button>
+                        <a href="{{ route('admin.obat.edit', $obat->id) }}" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
+                        <form action="{{ route('admin.obat.destroy', $obat->id) }}" method="POST" class="m-0" style="display:inline;">
+                          @csrf @method('DELETE')
+                          <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">
+                            <i class="fas fa-trash-alt"></i> Hapus
+                          </button>
+                        </form>
+                      </div>
                     </td>
                   </tr>
                 @empty
